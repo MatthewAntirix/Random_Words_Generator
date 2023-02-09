@@ -4,7 +4,5 @@ import {RandomWordsGenerator} from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
     <RandomWordsGenerator />
-  </React.StrictMode>
 )
