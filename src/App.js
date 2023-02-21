@@ -19,8 +19,8 @@ export const RandomWordsGenerator = () => {
     const [paragraphs, setParagraphs] = useState(3)
 
     const paragraphCount = (paragraphs > 10) ? 10 : parseInt(paragraphs)
-    let minWordsCount = (min > 100) ? 100 : parseInt(min)
-    let maxWordsCount = (max > 100) ? 100 : parseInt(max)
+    let minWordsCount = (min > 100) ? 100 : parseInt(min) || min < 1 ? 1 : parseInt(min)
+    let maxWordsCount = (max > 100) ? 100 : parseInt(max) || max < 1 ? 1 : parseInt(min)
         let wordsCount
         let [paragraphsArray, randomWordsArray] = [[], []]
         let [paragraphIndex, wordIndex] = [0, 0]
